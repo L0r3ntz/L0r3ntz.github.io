@@ -33,21 +33,21 @@
     <!-- Akhir Navbar -->
 
     <!-- Form -->
-    <form>
+    <form name='Contact-form'>
         <div class="mb-3">
             <h1 class="text-center">Contact Me!</h1>
             <label for="Name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="name">
+            <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="name" aria-describedby="email">
+            <input type="email" class="form-control" id="name" aria-describedby="email" name="email">
         </div>
         <div class="mb-3">
             <label for="Pesan" class="form-label">Message</label>
-            <textarea class="form-control" id="pesan" rows="3"></textarea>
+            <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-dark fw-bold btn-kirim">Send</button>
     </form>
     <!-- Akhir Form -->
 
@@ -58,6 +58,28 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbxsXogk4IvaprdW6UYb37qbOtS2LO2I3aZpepJIl8lCqOQU-KoGepobnsiArKYtEvdQdA/exec'
+        const form = document.forms['Contact-form']
+        const btnKirim = document.querySelector('.btn-kirim');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            // ketika tombol send di klik
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    form.reset();
+                    console.log('Success!', response)
+                    // reset form
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>

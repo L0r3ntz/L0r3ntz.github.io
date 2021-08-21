@@ -1,6 +1,6 @@
 Halo, Nama saya Muhammad Yusran
 
-Ini adalah web portofolio pertama saya.
+Ini adalah web portofolio pertama saya untuk portofolio poster art dan 3D model
 
 Alat-alat :
 

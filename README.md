@@ -10,3 +10,6 @@ Alat-alat :
 2. CSS
 3. Javascript
 4. Bootstrap 5
+
+Tutorial yang diikuti :
+- WebProgrammingUNPAS : https://www.youtube.com/watch?v=LkR-9Z1sle8&t=3487s

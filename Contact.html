@@ -53,10 +53,14 @@
     <!-- Akhir Form -->
 
     <!-- Footer -->
-    <footer class="bg-dark text-center text-white fw-bold p-1">
-        <p>2021 Created By <a href="https://www.instagram.com/l0r3ntz__/" class="text-white">Muhammad Yusran |
-                L0r3ntz</a></p>
-    </footer>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+            <div class="align-items-center">
+                <span class="text-muted">© 2021 <a href="https://www.instagram.com/l0r3ntz__/"
+                        class="text-dark fw-bold">L0r3ntz</a></span>
+            </div>
+        </footer>
+    </div>
     <!-- Akhir Footer -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -73,9 +77,9 @@
                     body: new FormData(form)
                 })
                 .then(response => {
+                    // reset form
                     form.reset();
                     console.log('Success!', response)
-                    // reset form
                 })
                 .catch(error => console.error('Error!', error.message))
         })
